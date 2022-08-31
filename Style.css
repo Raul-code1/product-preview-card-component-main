@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --font-fraunces: 'Fraunces', serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+
+    /* ### Primary */
+
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /* Neutral  */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+body{
+    padding: 15px;
+    background: var(--Cream);
+}
+
+.container{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hero-image{
+    min-height: 250px;
+    width: 100%;
+    background: url(./images/image-product-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-info{
+    background: var(--White);
+    padding: 20px;
+}
+
+.perfume{
+    text-transform: uppercase;
+    padding-bottom: 12px;
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--Dark-grayish-blue);
+}
+
+h1{
+    font-family: var(--font-fraunces);
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.info{
+    line-height: 28px;
+    font-family: var(--font-montserrat);
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.price{
+    color: var(--Dark-cyan);
+    font-size: var(--font-fraunces);
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 22px;
+}
+
+.price span{
+    color: var(--Dark-grayish-blue);
+    font-size: 15px;
+}
+
+
+.add{
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    border: none;
+    padding: 15px 0px;
+    width: 100%;
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.add:hover{
+    background-color: var(--Very-dark-blue);
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media queries */
+
+@media screen and (min-width:540px) {
+    
+    .hero-image{
+        background: url(./images/image-product-desktop.jpg );
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media screen and (min-width:800px) {
+
+    .container{
+        flex-direction: row;
+        width: 70%;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+
+
+    .container{
+        width: 50%;
+        height: 70%;
+    }
+
+    .card-info{
+        padding: 45px;
+    }
+
+    .perfume , h1, .info, .price{
+        padding-bottom: 10px;
+    }
+    
+    .price {
+        font-size: 45px; 
+    }
+    
+    .price span{
+        font-size: 22px;
+    }
+    
+    
+}
+
+
+@media only screen and (min-width: 1147px)  {
+    
+    
+    .perfume , h1, .info, .price{
+        padding-bottom: 30px;
+    }
+  
+}
